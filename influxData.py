@@ -38,11 +38,8 @@ class data:
         timestamp = self._timestamp
         value = self._value
 
-        print(measurement,field,tags,timestamp,value)
-
         point = Point(measurement)
         for key in tags:
-            print(key,tags[key])
             point.tag(key,tags[key])
         
         point.field(field, value).time(timestamp, WritePrecision.NS)#datetime.fromtimestamp(timestamp), WritePrecision.NS)

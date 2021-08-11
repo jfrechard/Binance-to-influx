@@ -3,9 +3,7 @@ from binance.client import Client
 
 def connect_binance(key, secret):
     binance_client = Client(key, secret)
-    
     return binance_client
-
 
 def get_current_assets(client:Client):
     result_account = client.get_account()
